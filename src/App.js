@@ -8,7 +8,7 @@ import TablesEventsId from './components/views/TablesEventsId/TablesEventsId';
 import TablesEventsNew from './components/views/TablesEventsNew/TablesEventsNew';
 import Tables from './components/views/Tables/Tables';
 import Login from './components/views/Login/Login';
-import Dashboard from './components/views/Dashboard/Dashboard';
+import Homepage from './components/views/Homepage/Homepage';
 import Waiter from './components/views/Waiter/Waiter';
 import WaiterOrderNew from './components/views/WaiterOrderNew/WaiterOrderNew';
 import WaiterOrderId from './components/views/WaiterOrderId/WaiterOrderId';
@@ -17,10 +17,11 @@ import Kitchen from './components/views/Kitchen/Kitchen';
 
 function App() {
   return (
+    // <BrowserRouter basename={'/panel'}> - w module jest ta linia ale basename generuje ostrzeżenie że / (Homepage) nie zaczyna się od /panel
     <BrowserRouter>
       <MainLayout>
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Dashboard} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Homepage} />
           <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
 
           <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
