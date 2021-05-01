@@ -20,20 +20,20 @@ function App() {
     <BrowserRouter>
       <MainLayout>
         <Switch>
-          <Route exact path='/' component={Dashboard} />
-          <Route exact path='/login' component={Login} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Dashboard} />
+          <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
 
-          <Route exact path='/tables' component={Tables} />
-          <Route exact path='/tables/booking/:id' component={TablesBookingId} />
-          <Route exact path='/tables/booking/new' component={TablesBookingNew} />
-          <Route exact path='/tables/events/:id' component={TablesEventsId} />
-          <Route exact path='/tables/events/new' component={TablesEventsNew} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/booking/:id'} component={TablesBookingId} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/booking/new'} component={TablesBookingNew} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={TablesEventsId} />
+          <Route exact path={process.env.PUBLIC_URL + '/tables/events/new'} component={TablesEventsNew} />
 
-          <Route exact path='/waiter' component={Waiter} />
-          <Route exact path='/waiter/order/:id' component={WaiterOrderId} />
-          <Route exact path='/waiter/order/new' component={WaiterOrderNew} />
+          <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
+          <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={WaiterOrderId} />
+          <Route exact path={process.env.PUBLIC_URL + '/waiter/order/new'} component={WaiterOrderNew} />
 
-          <Route exact path='/kitchen' component={Kitchen} />
+          <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
         </Switch>
       </MainLayout>
     </BrowserRouter>
