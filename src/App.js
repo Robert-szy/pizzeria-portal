@@ -36,6 +36,7 @@ function App() {
           <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
         </Switch>
       </MainLayout>
+
     </BrowserRouter>
   );
 }
