@@ -13,9 +13,9 @@ import TablesEventsNew from './components/views/TablesEventsNew/TablesEventsNew'
 import Tables from './components/views/Tables/Tables';
 import Login from './components/views/Login/Login';
 import Homepage from './components/views/Homepage/Homepage';
-import Waiter from './components/views/Waiter/Waiter';
-import WaiterOrderNew from './components/views/WaiterOrderNew/WaiterOrderNew';
-import WaiterOrderId from './components/views/WaiterOrderId/WaiterOrderId';
+import Orders from './components/views/Orders/Orders';
+import OrdersOrderNew from './components/views/OrdersOrderNew/OrdersOrderNew';
+import OrdersOrderId from './components/views/OrdersOrderId/OrdersOrderId';
 import Kitchen from './components/views/Kitchen/Kitchen';
 
 const theme = createMuiTheme({
@@ -42,9 +42,9 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/new'} component={TablesEventsNew} />
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={TablesEventsId} />
 
-              <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
-              <Route exact path={process.env.PUBLIC_URL + '/waiter/order/new'} component={WaiterOrderNew} />
-              <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={WaiterOrderId} />
+              <Route exact path={process.env.PUBLIC_URL + '/orders'} component={Orders} />
+              <Route exact path={process.env.PUBLIC_URL + '/orders/order/new'} component={OrdersOrderNew} />
+              <Route exact path={process.env.PUBLIC_URL + '/orders/order/:id'} component={OrdersOrderId} />
 
               <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
             </Switch>

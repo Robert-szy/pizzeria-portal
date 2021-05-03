@@ -4,7 +4,6 @@ import PageNav from '../PageNav/PageNav';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
-//import Header from '../Header/Header';
 
 const MainLayout = ({children}) => (
   <div className='MainLayout'>

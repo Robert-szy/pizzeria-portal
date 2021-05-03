@@ -31,7 +31,7 @@
 - `/waiter`
   - tabela
     - w wierszach stoliki
-    - w kolumnach różne rodzaje informacji (statusz, czas od ostatniej aktywności)
+    - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
     - w ostatniej kolumnie dostępne akcje dla danego stolika
 - `/waiter/order/new`
   - numer stolika (edytowalny)
@@ -48,4 +48,6 @@
   - lista musi zawierać:
     - numer stolika (lub zamówienia zdalnego)
     - pełne informacje dotyczące zamówinonych dań
-  - na liście musi być możliwość oznaczenia zamówienia jako
+  - na liście musi być możliwość oznaczenia zamówienia jako zrealizowane
+
+
