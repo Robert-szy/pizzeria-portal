@@ -16,7 +16,6 @@ const TablesBookingNew = () => (
         <Grid item container xs={12} justify='space-around' >
           <Button>stolik</Button>
         </Grid>
-
         <Grid item xs={6}>
           <Button>data</Button>
         </Grid>
@@ -26,12 +25,12 @@ const TablesBookingNew = () => (
         </Grid>
       </Grid>
 
+
       <Grid container xs={6} justify='space-around' alignContent='flex-start'>
 
         <Grid item container xs={12} justify='space-around'>
           <Button>ID</Button>
         </Grid>
-
         <Grid container xs={6} justify='space-around'>
           <Grid item xs={12}>
             <Button>l. osób</Button>

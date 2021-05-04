@@ -28,18 +28,18 @@
   - analogicznie do powyższej, dla eventów, bez początkowych inforamcji
 
 # Widok kelnera
-- `/waiter`
+- `/orders`
   - tabela
     - w wierszach stoliki
     - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
     - w ostatniej kolumnie dostępne akcje dla danego stolika
-- `/waiter/order/new`
+- `/orders/order/new`
   - numer stolika (edytowalny)
   - menu produktów
   - opcje wybranego produktu
-  - zamówienie (zamównine produkty z opcjami i ceną)
+  - zamówienie (zamówione produkty z opcjami i ceną)
   - kwota zamówienia
-- `/waiter/order/:id`
+- `/orders/order/:id`
   - analogicznie do powyższej
 
 # Widok kuchni
