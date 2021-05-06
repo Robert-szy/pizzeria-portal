@@ -49,9 +49,7 @@ const Kitchen = () => {
   // const [page] = React.useState(0);
   // const [rowsPerPage] = React.useState(3);
   const [checked, setChecked] = React.useState(true);
-  console.log('sssss', setChecked);
   const handleChange = (event) => {
-    console.log('sssss2', setChecked);
 
     setChecked(event.target.checked);
   };
