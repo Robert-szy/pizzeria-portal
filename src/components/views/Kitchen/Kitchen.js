@@ -48,9 +48,11 @@ import styles from './Kitchen.module.scss';
 const Kitchen = () => {
   // const [page] = React.useState(0);
   // const [rowsPerPage] = React.useState(3);
-  const [setChecked] = React.useState(true);
-
+  const [checked, setChecked] = React.useState(true);
+  console.log('sssss', setChecked);
   const handleChange = (event) => {
+    console.log('sssss2', setChecked);
+
     setChecked(event.target.checked);
   };
 
@@ -60,7 +62,7 @@ const Kitchen = () => {
     {id: '3', tableRemote: '111', order: 'Ogórkowa', status: 'in progress', realized: false},
     {id: '4', tableRemote: '2', order: 'Ryba z frytkami', status: 'in progress', realized: false},
     {id: '5', tableRemote: '122', order: 'Kuczak w cieście', status: 'in progress', realized: false},
-    {id: '6', tableRemote: '1333', order: 'Pizza', status: 'in progress', realized: false},
+    {id: '6', tableRemote: '1333', order: 'Pizza', status: 'in progress', realized: true},
     {id: '7', tableRemote: '14', order: 'Sałatka', status: 'in progress', realized: false},
   ];
 
@@ -109,8 +111,7 @@ const Kitchen = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </Paper> */}
-
+      </Paper>  */}
 
       <Paper className={styles.component}>
         <Table>
@@ -137,7 +138,7 @@ const Kitchen = () => {
                 <TableCell>
                   <Checkbox
                     checked={row.realized}
-                    onChange={handleChange}
+                    onChange= {(event) => {handleChange(event);}}
                     inputProps={{ 'aria-label': 'primary checkbox' }}
                   />
                 </TableCell>
