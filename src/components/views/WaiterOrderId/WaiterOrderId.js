@@ -5,11 +5,11 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 //import PropTypes from 'prop-types';
-import styles from './OrdersOrderId.module.scss';
+import styles from './WaiterOrderId.module.scss';
 
-const OrdersOrderId = () => (
+const WaiterOrderId = () => (
   <div className={styles.component}>
-    <h2>OrdersOrderId view</h2>
+    <h2>WaiterOrderId view</h2>
     <Grid container spacing={3}>
       <Grid container xs={6} justify='space-around' alignContent='flex-start'>
         <Grid item container xs={12} justify='space-around' >
@@ -44,4 +44,4 @@ const OrdersOrderId = () => (
   </div>
 );
 
-export default OrdersOrderId;
+export default WaiterOrderId;
