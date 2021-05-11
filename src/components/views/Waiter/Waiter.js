@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 class Waiter extends React.Component {
   static propTypes = {
     fetchTables: PropTypes.func,
+    pushStatus: PropTypes.func,
     loading: PropTypes.shape({
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
@@ -20,6 +21,7 @@ class Waiter extends React.Component {
       PropTypes.array,
       PropTypes.object,
     ]),
+    //table: PropTypes.string,
   }
 
   componentDidMount(){
@@ -27,34 +29,76 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  renderActions(status){
+  setStatus(newStatus, id){
+
+    this.props.tables[id-1].status=newStatus;
+
+    console.log('tables id-1', this.props.tables[id-1]);
+    const { pushStatus } = this.props;
+    console.log('pushStatus', pushStatus);
+    pushStatus(this.props.tables, id);
+
+  }
+
+  renderActions(status, id){
     switch (status) {
       case 'free':
         return (
           <>
-            <Button>thinking</Button>
-            <Button>new order</Button>
+            <Button
+              onClick={() => {
+                this.setStatus('thinking', id);
+                window.location.reload();
+              }
+              }>thinking</Button>
+            <Button
+              onClick={() => {
+                this.setStatus('ordered', id);
+                window.location.reload();
+              }
+              }>new order</Button>
           </>
         );
       case 'thinking':
         return (
-          <Button>new order</Button>
+          <Button
+            onClick={() => {
+              this.setStatus('ordered', id);
+              window.location.reload();
+            }
+            }>new order</Button>
         );
       case 'ordered':
         return (
-          <Button>prepared</Button>
+          <Button onClick={() => {
+            this.setStatus('prepared', id);
+            window.location.reload();
+          }
+          }>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button>delivered</Button>
+          <Button onClick={() => {
+            this.setStatus('delivered', id);
+            window.location.reload();
+          }
+          }>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button>paid</Button>
+          <Button onClick={() => {
+            this.setStatus('paid', id);
+            window.location.reload();
+          }
+          }>paid</Button>
         );
       case 'paid':
         return (
-          <Button>free</Button>
+          <Button onClick={() => {
+            this.setStatus('free', id);
+            window.location.reload();
+          }
+          }>free</Button>
         );
       default:
         return null;
@@ -106,7 +150,7 @@ class Waiter extends React.Component {
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(row.status)}
+                    {this.renderActions(row.status, row.id)}
                   </TableCell>
                 </TableRow>
               ))}
