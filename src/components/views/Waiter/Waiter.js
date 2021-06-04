@@ -31,7 +31,7 @@ class Waiter extends React.Component {
 
   setStatus(newStatus, id){
 
-    this.props.tables[id-1].status=newStatus;
+    this.props.tables[id].status=newStatus;
 
     console.log('tables id-1', this.props.tables[id-1]);
     const { pushStatus } = this.props;

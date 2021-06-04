@@ -39,9 +39,9 @@ export const fetchFromAPI = () => {
 
 export const pushToAPI = (tables, id) => {
   return (dispatch, getState) => {
-    console.log('apitables', tables[id]);
-    console.log('apitables2', api.tables[id].status);
-
+    //console.log('apitables', tables[id]);
+    //console.log('apitables2', api.tables[id].status);
+    //console.log('apitables2', tables[id].status);
 
     dispatch(setOrder());
 
